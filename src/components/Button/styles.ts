@@ -1,6 +1,6 @@
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled, { css } from 'styled-components/native';
-import theme from '@global/styles/theme';
+import theme from '../../styles/theme';
 
 type tplotOptions = {
 	[key: string]: string

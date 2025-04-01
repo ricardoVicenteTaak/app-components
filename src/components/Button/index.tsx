@@ -3,7 +3,7 @@ import { ActivityIndicator, Keyboard } from 'react-native';
 import React from 'react';
 
 // STYLE
-import theme from '@styles/theme';
+import theme from '../../styles/theme';
 import * as S from './styles';
 
 export type ButtonType = 'default' | 'brand' | 'destructive' | 'outline';
