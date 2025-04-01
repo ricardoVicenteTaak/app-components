@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 2341">
+<g id="campaign">
+<mask id="mask0_5108_20965" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<rect id="Bounding box" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_5108_20965)">
+<path id="campaign_2" d="M19.2 12.8V10.4H24V12.8H19.2ZM20.64 21.2L16.8 18.32L18.24 16.4L22.08 19.28L20.64 21.2ZM18.24 6.8L16.8 4.88L20.64 2L22.08 3.92L18.24 6.8ZM3.6 20V15.2H2.4C1.74 15.2 1.175 14.965 0.705 14.495C0.235 14.025 0 13.46 0 12.8V10.4C0 9.74 0.235 9.175 0.705 8.705C1.175 8.235 1.74 8 2.4 8H7.2L13.2 4.4V18.8L7.2 15.2H6V20H3.6ZM10.8 14.54V8.66L7.86 10.4H2.4V12.8H7.86L10.8 14.54ZM14.4 15.62V7.58C14.94 8.06 15.375 8.645 15.705 9.335C16.035 10.025 16.2 10.78 16.2 11.6C16.2 12.42 16.035 13.175 15.705 13.865C15.375 14.555 14.94 15.14 14.4 15.62Z" fill="currentColor"/>
+</g>
+</g>
+</g>
+</svg>

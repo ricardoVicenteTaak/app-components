@@ -8,4 +8,7 @@ module.exports = withStorybook(defaultConfig, {
   enabled: true,
   configPath: path.resolve(__dirname, "./.storybook"),
   useJs: true,
+  resolver: {
+    assetExts: ['svg', 'png', 'jpg', 'jpeg', 'gif'],
+  }
 });

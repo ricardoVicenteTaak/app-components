@@ -17,8 +17,9 @@ const preview = {
         style={{
           flex: 1,
           backgroundColor:
-            parameters.noBackground === true ? undefined : "#26c6da",
+            parameters.noBackground === true ? undefined : "#FFF",
           padding: 8,
+          justifyContent : 'center'
         }}
       >
         <Story />
