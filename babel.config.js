@@ -9,10 +9,11 @@ module.exports = function (api) {
           root: ['./'],
           alias: {
             '@icons': './src/icons',
-            '@styles': '.src/styles',
+            '@styles': './src/styles',
           },
         },
       ],
+      'react-native-reanimated/plugin', // Mantenha isso sempre no final
     ],
   };
 };

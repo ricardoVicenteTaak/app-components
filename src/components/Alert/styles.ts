@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
 import theme from "../../styles/theme";
 
-import { Props } from "./index";
 
 type typeOptionsData = {
 	[key: string]: string
