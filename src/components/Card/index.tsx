@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TouchableOpacity, Animated } from 'react-native';
-import { SvgXml } from 'react-native-svg';
+// import { SvgXml } from 'react-native-svg';
 import * as S from './styles';
 import { Alert } from '../Alert/index';
 
@@ -86,7 +86,7 @@ export function UserCard({ username, onPress, isFollow, theme }: UserCardProps) 
 
       <S.Container style={{ backgroundColor: themeBackground }}>
         <S.IconContainer>
-          <SvgXml xml={avatarIcon} width={40} height={40} />
+          {/* <SvgXml xml={avatarIcon} width={40} height={40} /> */}
         </S.IconContainer>
         <S.UserInfo>
           <S.Username style={{ color: themeTextColor }} numberOfLines={1} ellipsizeMode="tail">

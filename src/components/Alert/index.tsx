@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgXml } from 'react-native-svg';
+// import { SvgXml } from 'react-native-svg';
 import theme from '../../styles/theme';
 import * as S from './styles';
 
@@ -20,7 +20,7 @@ export function Alert({
 
   return (
     <S.Container type={type}>
-      <SvgXml xml={infoIcon} width={24} style={{ color: theme.colors.primary.white }} />
+      {/* <SvgXml xml={infoIcon} width={24} style={{ color: theme.colors.primary.white }} /> */}
       <S.Description>{description}</S.Description>
     </S.Container>
   );
