@@ -5,4 +5,12 @@ export default ({ config }) => ({
   extra: {
     storybookEnabled: process.env.STORYBOOK_ENABLED,
   },
+  android: {
+    ...config.android,
+    newArchEnabled: false, // 🚨 Desativa a Nova Arquitetura no Android
+  },
+  ios: {
+    ...config.ios,
+    newArchEnabled: false, // 🚨 Desativa a Nova Arquitetura no iOS
+  },
 });

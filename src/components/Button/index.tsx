@@ -1,6 +1,6 @@
 // REACT
 import { ActivityIndicator, Keyboard } from 'react-native';
-import React from 'react';
+import React from "react";
 
 // STYLE
 import theme from '../../styles/theme';

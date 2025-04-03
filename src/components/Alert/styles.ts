@@ -11,9 +11,10 @@ const typeOptions: typeOptionsData = {
 	warning: theme.colors.salesforce.orange65,
 	error: theme.colors.company.third,
 	informational: theme.colors.company.secondary,
+	success : theme.colors.salesforce.green50
 }
 
-export const Container = styled.View<{ type: 'warning' | 'error' | 'informational' }>`
+export const Container = styled.View<{ type: 'warning' | 'error' | 'informational', 'success' }>`
   display: flex;
   flex-direction: row;
   align-items: center;

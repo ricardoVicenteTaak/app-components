@@ -1,7 +1,8 @@
+import React from "react"; // 👈 Necessário para JSX funcionar!
 import { View } from "react-native";
+import { Preview } from "@storybook/react";
 
-/** @type{import("@storybook/react").Preview} */
-const preview = {
+const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
@@ -19,7 +20,7 @@ const preview = {
           backgroundColor:
             parameters.noBackground === true ? undefined : "#FFF",
           padding: 8,
-          justifyContent : 'center'
+          justifyContent: "center",
         }}
       >
         <Story />

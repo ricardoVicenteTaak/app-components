@@ -2,21 +2,21 @@
 
 import { start, updateView } from "@storybook/react-native";
 
-import "@storybook/addon-ondevice-controls/register";
-import "@storybook/addon-ondevice-actions/register";
+import "@storybook/addon-actions/register.js";
+import "@storybook/addon-links/register";
 
 const normalizedStories = [
   {
     titlePrefix: "",
     directory: "./src/components",
-    files: "**/*.stories.?(ts|tsx|js|jsx)",
+    files: "**/*.stories.@(js|jsx|ts|tsx)",
     importPathMatcher:
-      /^\.(?:(?:^|\/|(?:(?:(?!(?:^|\/)\.).)*?)\/)(?!\.)(?=.)[^/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/,
+      /^\.(?:(?:^|\/|(?:(?:(?!(?:^|\/)\.).)*?)\/)(?!\.)(?=.)[^/]*?\.stories\.(js|jsx|ts|tsx))$/,
 
     req: require.context(
       "../src/components",
       true,
-      /^\.(?:(?:^|\/|(?:(?:(?!(?:^|\/)\.).)*?)\/)(?!\.)(?=.)[^/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/
+      /^\.(?:(?:^|\/|(?:(?:(?!(?:^|\/)\.).)*?)\/)(?!\.)(?=.)[^/]*?\.stories\.(js|jsx|ts|tsx))$/
     ),
   },
 ];
@@ -24,7 +24,8 @@ const normalizedStories = [
 const annotations = [
   require("./preview"),
   require("@storybook/react-native/preview"),
-  require("@storybook/addon-ondevice-actions/preview"),
+  require("@storybook/addon-actions/preview"),
+  require("@storybook/addon-links/preview"),
 ];
 
 global.STORIES = normalizedStories;

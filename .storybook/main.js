@@ -1,10 +1,52 @@
-/** @type{import("@storybook/react-native").StorybookConfig} */
 module.exports = {
-  stories: ["../src/components/**/*.stories.?(ts|tsx|js|jsx)"],
+  framework: "@storybook/react-webpack5",
+  stories: ["../src/components/**/*.stories.@(ts|tsx|js|jsx)"],
+  features: {
+    buildStoriesJson: true,
+  },
   addons: [
-    "@storybook/addon-ondevice-controls",
-    "@storybook/addon-ondevice-actions",
-    '@storybook/addon-react-native-web'
+    "@storybook/addon-actions",
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
   ],
-  framework: '@storybook/react-native-web-vite',
+  webpackFinal: async (config) => {
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      "react-native$": "react-native-web",
+      "react-native-svg": "react-native-svg-web",
+      
+    };
+
+    config.module.rules.push({
+      test: /\.cjs$/,
+      type: "javascript/auto",
+    });
+
+    config.module.rules.push({
+      test: /\.(js|jsx|ts|tsx)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: "babel-loader",
+        options: {
+          presets: [
+            "@babel/preset-env",
+            "@babel/preset-react",
+            "@babel/preset-typescript",
+          ],
+          plugins: [
+            "@babel/plugin-transform-runtime", // 🔹 Adiciona este plugin
+            ["@babel/plugin-proposal-class-properties", { loose: true }],
+            ["@babel/plugin-proposal-private-methods", { loose: true }],
+            ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
+            "react-native-reanimated/plugin",
+          ],
+        },
+      },
+    });
+
+    config.resolve.extensions.push(".js", ".jsx", ".ts", ".tsx");
+
+    // 🔹 Retorna config no final
+    return config;
+  },
 };
