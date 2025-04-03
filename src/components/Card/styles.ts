@@ -1,18 +1,19 @@
-import styled from "styled-components/native";
-import { RFValue } from "react-native-responsive-fontsize";
-import theme from "../../styles/theme";
+import styled from 'styled-components/native';
+import { RFValue } from 'react-native-responsive-fontsize';
+import theme from '../../styles/theme';
 
 export const Container = styled.View`
   flex-direction: row;
   align-items: center;
-  background-color: white;
-  padding: 16px;
+  background-color: ${theme.colors.primary.white};
+  padding: 12px;
   border-radius: 8px;
-  shadow-color: black;
   shadow-opacity: 0.1;
-  shadow-radius: 6px;
-  elevation: 4;
-  width: 100%;
+  shadow-radius: 4px;
+  shadow-color: black;
+  shadow-offset: 0px 2px;
+  elevation: 3;
+  justify-content: space-between;
 `;
 
 export const IconContainer = styled.View`
@@ -21,13 +22,10 @@ export const IconContainer = styled.View`
 
 export const UserInfo = styled.View`
   flex: 1;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const Username = styled.Text`
-  font-size: ${RFValue(16)}px;
+  font-size: ${RFValue(14)}px;
   font-weight: bold;
   color: black;
 `;
@@ -36,9 +34,33 @@ export const Button = styled.View`
   background-color: #007bff;
   padding: 8px 16px;
   border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ButtonUnfollow = styled(Button)`
+  background-color: red;
 `;
 
 export const ButtonText = styled.Text`
+  color: white;
+  font-size: ${RFValue(14)}px;
+  font-weight: bold;
+`;
+
+// Estilos do alerta no topo
+export const alertStyle = {
+  position: 'absolute',
+  top: 20,
+  left: 10,
+  right: 10,
+  padding: 12,
+  borderRadius: 6,
+  zIndex: 10,
+  alignItems: 'center',
+};
+
+export const AlertText = styled.Text`
   color: white;
   font-size: ${RFValue(14)}px;
   font-weight: bold;

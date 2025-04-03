@@ -4,7 +4,7 @@ import theme from '../../styles/theme';
 import * as S from './styles';
 
 export interface Props {
-  type: 'warning' | 'error' | 'informational';
+  type: 'warning' | 'error' | 'informational' | 'success';
   description: string;
 }
 
