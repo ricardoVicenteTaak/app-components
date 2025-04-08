@@ -1192,6 +1192,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-transform-react-constant-elements@npm:^7.21.3":
+  version: 7.25.9
+  resolution: "@babel/plugin-transform-react-constant-elements@npm:7.25.9"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.25.9"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 10c0/50aca3df122cf801abd251cc2507ef3011ead8f047d31d8f35b10627dd722f6a165245b09e81b3c6876515fd266a97aed0052f6b409aa1fe961fb36dd7cc0822
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-transform-react-display-name@npm:^7.0.0, @babel/plugin-transform-react-display-name@npm:^7.24.7, @babel/plugin-transform-react-display-name@npm:^7.25.9":
   version: 7.25.9
   resolution: "@babel/plugin-transform-react-display-name@npm:7.25.9"
@@ -1432,7 +1443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.24.4, @babel/preset-env@npm:^7.26.9":
+"@babel/preset-env@npm:^7.20.2, @babel/preset-env@npm:^7.24.4, @babel/preset-env@npm:^7.26.9":
   version: 7.26.9
   resolution: "@babel/preset-env@npm:7.26.9"
   dependencies:
@@ -1537,7 +1548,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:^7.22.15, @babel/preset-react@npm:^7.26.3":
+"@babel/preset-react@npm:^7.18.6, @babel/preset-react@npm:^7.22.15, @babel/preset-react@npm:^7.26.3":
   version: 7.26.3
   resolution: "@babel/preset-react@npm:7.26.3"
   dependencies:
@@ -1553,7 +1564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.13.0, @babel/preset-typescript@npm:^7.16.7, @babel/preset-typescript@npm:^7.23.0, @babel/preset-typescript@npm:^7.27.0":
+"@babel/preset-typescript@npm:^7.13.0, @babel/preset-typescript@npm:^7.16.7, @babel/preset-typescript@npm:^7.21.0, @babel/preset-typescript@npm:^7.23.0, @babel/preset-typescript@npm:^7.27.0":
   version: 7.27.0
   resolution: "@babel/preset-typescript@npm:7.27.0"
   dependencies:
@@ -1857,6 +1868,13 @@ __metadata:
   version: 0.25.2
   resolution: "@esbuild/win32-x64@npm:0.25.2"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@expo-google-fonts/inter@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@expo-google-fonts/inter@npm:0.3.0"
+  checksum: 10c0/0cf2de4dcb413010422c78cea990da88aa2a0a67f709ada11d3f6919b8799183a93d514d93e6903dd4e2a63684a456b1f7d70b05db5dfee7ef4ab72c4fde299c
   languageName: node
   linkType: hard
 
@@ -4177,7 +4195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/core@npm:^8.1.0":
+"@svgr/core@npm:8.1.0, @svgr/core@npm:^8.1.0":
   version: 8.1.0
   resolution: "@svgr/core@npm:8.1.0"
   dependencies:
@@ -4200,7 +4218,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/plugin-jsx@npm:^8.1.0":
+"@svgr/plugin-jsx@npm:8.1.0, @svgr/plugin-jsx@npm:^8.1.0":
   version: 8.1.0
   resolution: "@svgr/plugin-jsx@npm:8.1.0"
   dependencies:
@@ -4214,7 +4232,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/plugin-svgo@npm:^8.1.0":
+"@svgr/plugin-svgo@npm:8.1.0, @svgr/plugin-svgo@npm:^8.1.0":
   version: 8.1.0
   resolution: "@svgr/plugin-svgo@npm:8.1.0"
   dependencies:
@@ -4224,6 +4242,22 @@ __metadata:
   peerDependencies:
     "@svgr/core": "*"
   checksum: 10c0/bfd25460f23f1548bfb8f6f3bedd6d6972c1a4f8881bd35a4f8c115218da6e999e8f9ac0ef0ed88c4e0b93fcec37f382b94c0322f4ec2b26752a89e5cc8b9d7a
+  languageName: node
+  linkType: hard
+
+"@svgr/webpack@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "@svgr/webpack@npm:8.1.0"
+  dependencies:
+    "@babel/core": "npm:^7.21.3"
+    "@babel/plugin-transform-react-constant-elements": "npm:^7.21.3"
+    "@babel/preset-env": "npm:^7.20.2"
+    "@babel/preset-react": "npm:^7.18.6"
+    "@babel/preset-typescript": "npm:^7.21.0"
+    "@svgr/core": "npm:8.1.0"
+    "@svgr/plugin-jsx": "npm:8.1.0"
+    "@svgr/plugin-svgo": "npm:8.1.0"
+  checksum: 10c0/4c1cac45bd5890de8643e5a7bfb71f3bcd8b85ae5bbacf10b8ad9f939b7a98e8d601c3ada204ffb95223abf4a24beeac5a2a0d6928a52a1ab72a29da3c015c22
   languageName: node
   linkType: hard
 
@@ -7242,7 +7276,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-font@npm:~13.0.4":
+"expo-font@npm:13.0.4, expo-font@npm:~13.0.4":
   version: 13.0.4
   resolution: "expo-font@npm:13.0.4"
   dependencies:
@@ -11367,16 +11401,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-svg@npm:13.4.0":
-  version: 13.4.0
-  resolution: "react-native-svg@npm:13.4.0"
+"react-native-svg@npm:^15.11.2":
+  version: 15.11.2
+  resolution: "react-native-svg@npm:15.11.2"
   dependencies:
     css-select: "npm:^5.1.0"
     css-tree: "npm:^1.1.3"
+    warn-once: "npm:0.1.1"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/66b911bbe18c9b362f60e3487e65864d81526e55caec00921516956017bb1c7085432a10e330074bb094089d6989587ef5fc67c0637d9788b1db8734f0af3b05
+  checksum: 10c0/040f3a298db80f4a282f9616c9550d7978beebc518de523eb417106afd7f5cb1d021424ea287cedba705f0c48aa15631056c42a79c4b46edcafa34cba71aed63
   languageName: node
   linkType: hard
 
@@ -12524,6 +12559,7 @@ __metadata:
     "@babel/preset-react": "npm:^7.26.3"
     "@babel/preset-typescript": "npm:^7.27.0"
     "@chromatic-com/storybook": "npm:^3"
+    "@expo-google-fonts/inter": "npm:^0.3.0"
     "@expo/metro-runtime": "npm:~3.2.3"
     "@expo/vector-icons": "npm:^14.0.3"
     "@gorhom/bottom-sheet": "npm:^4.6.4"
@@ -12545,6 +12581,7 @@ __metadata:
     "@storybook/react-native-web-vite": "npm:^8.6.12"
     "@storybook/react-webpack5": "npm:^8.6.12"
     "@storybook/test": "npm:^8.6.12"
+    "@svgr/webpack": "npm:^8.1.0"
     "@types/babel__plugin-transform-runtime": "npm:^7"
     "@types/babel__preset-env": "npm:^7"
     "@types/react": "npm:~18.2.79"
@@ -12554,6 +12591,7 @@ __metadata:
     cross-env: "npm:^7.0.3"
     expo: "npm:^52.0.0"
     expo-constants: "npm:~16.0.2"
+    expo-font: "npm:13.0.4"
     locate-path: "npm:^7.2.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -12562,7 +12600,7 @@ __metadata:
     react-native-reanimated: "npm:^3.17.2"
     react-native-responsive-fontsize: "npm:^0.5.1"
     react-native-safe-area-context: "npm:4.10.5"
-    react-native-svg: "npm:13.4.0"
+    react-native-svg: "npm:^15.11.2"
     react-native-svg-transformer: "npm:^1.5.0"
     react-native-svg-web: "npm:^1.0.9"
     react-native-web: "npm:0.19.6"
@@ -13638,6 +13676,13 @@ __metadata:
   dependencies:
     makeerror: "npm:1.0.12"
   checksum: 10c0/a17e037bccd3ca8a25a80cb850903facdfed0de4864bd8728f1782370715d679fa72e0a0f5da7c1c1379365159901e5935f35be531229da53bbfc0efdabdb48e
+  languageName: node
+  linkType: hard
+
+"warn-once@npm:0.1.1":
+  version: 0.1.1
+  resolution: "warn-once@npm:0.1.1"
+  checksum: 10c0/f531e7b2382124f51e6d8f97b8c865246db8ab6ff4e53257a2d274e0f02b97d7201eb35db481843dc155815e154ad7afb53b01c4d4db15fb5aa073562496aff7
   languageName: node
   linkType: hard
 
