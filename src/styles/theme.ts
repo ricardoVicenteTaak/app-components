@@ -43,7 +43,7 @@ export default {
     },
 
     fonts: {
-        regular: 'Montserrat-Regular',
+        regular: 'Inter',
         regular_italic: 'Montserrat-Italic',
         medium: 'Montserrat-Medium',
         medium_italic: 'Montserrat-MediumItalic',

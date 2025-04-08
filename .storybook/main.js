@@ -34,7 +34,7 @@ module.exports = {
             "@babel/preset-typescript",
           ],
           plugins: [
-            "@babel/plugin-transform-runtime", // 🔹 Adiciona este plugin
+            "@babel/plugin-transform-runtime",
             ["@babel/plugin-proposal-class-properties", { loose: true }],
             ["@babel/plugin-proposal-private-methods", { loose: true }],
             ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
@@ -46,7 +46,6 @@ module.exports = {
 
     config.resolve.extensions.push(".js", ".jsx", ".ts", ".tsx");
 
-    // 🔹 Retorna config no final
     return config;
   },
 };
