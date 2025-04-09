@@ -1,70 +1,68 @@
+/*
+  Author: Ricardo Vicente
+  Email: ricardo.vicente@taak.com.br
+  Last modified: 2025-04-09 12:50
+*/
+
 import { RFValue } from 'react-native-responsive-fontsize';
-import styled, { css } from 'styled-components/native';
+import styled from 'styled-components/native';
 import theme from '../../styles/theme';
 
-type tplotOptions = {
-	[key: string]: string
-}
+type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'destructive' | 'default';
 
-const colorButtonType: tplotOptions = {
-	default: theme.colors.primary.white,
-	brand: theme.colors.company.primary,
-	destructive: theme.colors.company.third,
-	outline: theme.colors.primary.white,
-}
+type ButtonProps = {
+  disabled: boolean;
+  type: ButtonType;
+};
 
-const colorTextType: tplotOptions = {
-	default: theme.colors.company.secondary,
-	brand: theme.colors.primary.white,
-	destructive: theme.colors.primary.white,
-	outline: theme.colors.company.secondary,
-}
+const colorButtonType = {
+  default: '#fff',
+  tertiary: '#FFF',
+  destructive: '#D71969',
+  primary: '#1D1D1D',
+  secondary: '#FFF',
+};
 
-interface ButtonProps {
-	disabled: boolean
-	type: 'default' | 'brand' | 'destructive' | 'outline'
-}
+const colorBorderType = {
+  default: '#D71969',
+  tertiary: 'transparent',
+  destructive: 'transparent',
+  primary: 'transparent',
+  secondary: '#1D1D1D',
+};
+
+const colorTextType = {
+  default: '#D71969',
+  tertiary: '#1D1D1D',
+  destructive: theme.colors.primary.white,
+  primary: '#FFF',
+  secondary: '#1D1D1D',
+};
 
 export const Container = styled.TouchableOpacity.attrs({
-	activeOpacity: 0.5
+  activeOpacity: 0.5,
 })<ButtonProps>`
-	width: 100%;
-	background-color: ${({ disabled, type }: ButtonProps) =>
-		disabled
-			? theme.colors.primary.lightGrey
-			: colorButtonType[type]
-	};
-
-	border-radius: 5px;
-
-	${({ type }: ButtonProps) =>
-		type == 'outline' &&
-		css`
-			border: 1px solid ${theme.colors.company.secondary};
-		`
-	}
+  justify-content: center;
+  border-radius: 46px;
+  padding: 12px;
+  border: ${({ type }) => colorBorderType[type]};
+  background-color: ${({ disabled, type }) =>
+    disabled ? theme.colors.salesforce.neutral90 : colorButtonType[type]};
 `;
 
 export const StyledButton = styled.View`
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	border-radius: 5px;
-	padding: ${RFValue(1)}px ${RFValue(16)}px;
-	min-height: ${RFValue(36)}px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Title = styled.Text.attrs({
-	numberOfLines: 1,
-	adjustsFontSizeToFit: true
+  numberOfLines: 1,
+  adjustsFontSizeToFit: true,
 })<ButtonProps>`
-	font-size: ${RFValue(13)}px;
-	font-family: ${theme.fonts.regular};
-
-	text-align: center;
-
-	color: ${({ type, disabled }: ButtonProps) =>
-		disabled
-			? theme.colors.primary.white
-			: type == 'outline' ? theme.colors.company.secondary : colorTextType[type]};
+  font-size: ${RFValue(8)}px;
+  font-family: ${theme.fonts.regular};
+  color: ${({ type, disabled }) =>
+    disabled ? theme.colors.primary.white : colorTextType[type]};
+  text-align: center;
 `;

@@ -1,9 +1,14 @@
+/*
+  Author: Ricardo Vicente
+  Email: ricardo.vicente@taak.com.br
+  Last modified: 2025-04-09 10:51
+*/
+
 import styled from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import theme from '../../styles/theme';
 
 export const Container = styled.View`
-  flex-direction: row;
   align-items: center;
   background-color: ${theme.colors.primary.white};
   padding: 12px;
@@ -13,8 +18,7 @@ export const Container = styled.View`
   shadow-color: black;
   shadow-offset: 0px 2px;
   elevation: 3;
-  justify-content: space-between;
-`;
+`
 
 export const IconContainer = styled.View`
   margin-right: 12px;

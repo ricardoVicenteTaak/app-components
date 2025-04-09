@@ -5,17 +5,17 @@
 */
 
 import React, { useState } from 'react';
-import { Card } from './index';
+import { CardButton } from './index';
 
 export default {
-  title: 'Components/Card',
-  component: Card,
+  title: 'Components/CardButton',
+  component: CardButton,
   tags: ["autodocs"]
 };
 
 const Template = (args) => {
   return (
-    <Card
+    <CardButton
       {...args}
     />
   );

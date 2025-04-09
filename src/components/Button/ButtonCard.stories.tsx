@@ -1,9 +1,15 @@
+/*
+  Author: Ricardo Vicente
+  Email: ricardo.vicente@taak.com.br
+  Last modified: 2025-04-09 12:50
+*/
+
 import React from "react";
-import { ButtonCard } from "./index";
+import { Button } from "./index";
 
 export default {
-  title: "Components/ButtonCard",
-  component: ButtonCard,
+  title: "Components/Button",
+  component: Button,
   tags: ["autodocs"],
   argTypes: {
     type: {
@@ -34,7 +40,7 @@ const Template = (args) => {
   console.log('ARGS')
   console.log(args)
   return (
-    <ButtonCard
+    <Button
     {...args}
   />
   
